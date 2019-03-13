@@ -48,7 +48,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 		response.sendRedirect("/");
 	}
 	String typraty = request.getParameter("sel");
-	
+	oprocentowanie = oprocentowanie.replace(',', '.');	
 	float ikwota = Float.parseFloat(kwota);
 	int iraty = Integer.parseInt(raty);
 	float ioprocentowanie = Float.parseFloat(oprocentowanie);
