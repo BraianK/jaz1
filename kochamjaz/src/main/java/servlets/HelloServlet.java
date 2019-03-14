@@ -44,8 +44,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     	generatePdf(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota),response);
     } else {
     	response.setContentType("text/html");
-        response.getWriter().println(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota));
-    	        	
+        response.getWriter().println(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota));	        	
     }
 }
 private String przygotuj(String sel, int raty, float oprocentowanie, float oplata, float kwota) {
