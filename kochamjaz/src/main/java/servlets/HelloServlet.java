@@ -41,14 +41,14 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
         response.sendRedirect("/");
     }
     if (akcja.contentEquals("pdf")) {
-    	generatePdf(preapreResponse(sel, iraty, iOprocentowanie, iOplata, iKwota),response);
+    	generatePdf(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota),response);
     } else {
     	response.setContentType("text/html");
-        response.getWriter().println(preapreResponse(sel, iraty, iOprocentowanie, iOplata, iKwota));
+        response.getWriter().println(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota));
     	        	
     }
 }
-private String preapreResponse(String sel, int raty, float oprocentowanie, float oplata, float kwota) {
+private String przygotuj(String sel, int raty, float oprocentowanie, float oplata, float kwota) {
         StringBuilder stringBuilder = new StringBuilder();
         float kapital = (kwota / raty);
         float odsetki = 0;
