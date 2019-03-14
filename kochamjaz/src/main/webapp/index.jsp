@@ -17,6 +17,10 @@
 <option value="stala">stala</option>
 <option value="malejaca">malejaca</option>
 </select></th></tr>
+<tr><th>Pokaz/PDF:<th><select id="akcja" name="akcja">
+<option value="wyswietl">Wyswietl harmonogram</option>
+<option value="pdf">Wygeneruj PDF</option>
+</select></th></tr>
 </table>
 <input type="submit" value="Wyslij"/>
 </form>
