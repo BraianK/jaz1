@@ -1,10 +1,9 @@
 package servlets;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,7 +13,7 @@ import org.mockito.Mockito;
 public class HelloServletTest extends Mockito {
 
 	@Test
-	public void servlet_if_kwota_is_null() throws IOException {
+	public void servlet_if_kwota_is_null() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -27,7 +26,7 @@ public class HelloServletTest extends Mockito {
 	}
 
 	@Test
-	public void servlet_if_kwota_is_empty() throws IOException {
+	public void servlet_if_kwota_is_empty() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -38,7 +37,7 @@ public class HelloServletTest extends Mockito {
 		verify(response).sendRedirect("/");
 	}
 	@Test
-	public void servlet_if_raty_is_null() throws IOException {
+	public void servlet_if_raty_is_null() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -51,7 +50,7 @@ public class HelloServletTest extends Mockito {
 	}
 
 	@Test
-	public void servlet_if_raty_is_empty() throws IOException {
+	public void servlet_if_raty_is_empty() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -62,7 +61,7 @@ public class HelloServletTest extends Mockito {
 		verify(response).sendRedirect("/");
 	}
 	@Test
-	public void servlet_if_oprocentowanie_is_null() throws IOException {
+	public void servlet_if_oprocentowanie_is_null() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -75,7 +74,7 @@ public class HelloServletTest extends Mockito {
 	}
 
 	@Test
-	public void servlet_if_oprocentowanie_is_empty() throws IOException {
+	public void servlet_if_oprocentowanie_is_empty() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -86,7 +85,7 @@ public class HelloServletTest extends Mockito {
 		verify(response).sendRedirect("/");
 	}
 	@Test
-	public void servlet_if_oplata_is_null() throws IOException {
+	public void servlet_if_oplata_is_null() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -99,7 +98,7 @@ public class HelloServletTest extends Mockito {
 	}
 
 	@Test
-	public void servlet_if_oplata_is_empty() throws IOException {
+	public void servlet_if_oplata_is_empty() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -110,7 +109,7 @@ public class HelloServletTest extends Mockito {
 		verify(response).sendRedirect("/");
 	}
 	@Test
-	public void servlet_if_sel_is_null() throws IOException {
+	public void servlet_if_sel_is_null() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);
@@ -123,7 +122,7 @@ public class HelloServletTest extends Mockito {
 	}
 
 	@Test
-	public void servlet_if_sel_is_empty() throws IOException {
+	public void servlet_if_sel_is_empty() throws IOException, ServletException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		PrintWriter writer = mock(PrintWriter.class);

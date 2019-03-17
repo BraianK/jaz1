@@ -11,7 +11,7 @@
 <table border="1">
 <tr><th>Wnioskowana kwota kredytu:</th><th><input type="number" id="kwota" name="kwota"/></th></tr>
 <tr><th>Ilosc rat:</th><th><input type="number" id="raty" name="raty"/></th></tr>
-<tr><th>Oprocentowanie:</th><th><input type="text" id="oprocentowanie" name="oprocentowanie"/></th></tr>
+<tr><th>Oprocentowanie:</th><th><input type="number" step="0.01" id="oprocentowanie" name="oprocentowanie"/></th></tr>
 <tr><th>Oplata stala:</th><th><input type="number" id="oplata" name="oplata"/></th></tr>
 <tr><th>Rata:</th><th><select id="sel" name="sel">
 <option value="stala">stala</option>

@@ -21,17 +21,18 @@ public class HelloServlet extends HttpServlet{
 private static final long serialVersionUID = 1L;
 
 public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    String kwota = request.getParameter("kwota");
+    boolean nextopr = true;
+	String kwota = request.getParameter("kwota");
     String raty = request.getParameter("raty");
     String oprocentowanie = request.getParameter("oprocentowanie");
-    oprocentowanie = oprocentowanie.replace(",", ".");
     String oplata = request.getParameter("oplata");
     String sel = request.getParameter("sel");
     String akcja = request.getParameter("akcja");
     if (kwota == null || kwota.equals("") || raty == null || raty.equals("") || oprocentowanie == null || oprocentowanie.equals("") || oplata == null || oplata.equals("")) {
         response.sendRedirect("/");
+        nextopr = false;
     }
-
+if(nextopr==true) {
     float iKwota = Float.parseFloat(kwota);
     int iraty = Integer.parseInt(raty);
     float iOprocentowanie = Float.parseFloat(oprocentowanie);
@@ -46,6 +47,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     	response.setContentType("text/html");
         response.getWriter().println(przygotuj(sel, iraty, iOprocentowanie, iOplata, iKwota));	        	
     }
+}
 }
 private String przygotuj(String sel, int raty, float oprocentowanie, float oplata, float kwota) {
         StringBuilder stringBuilder = new StringBuilder();
